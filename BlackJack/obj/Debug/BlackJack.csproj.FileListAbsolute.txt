@@ -1,0 +1,6 @@
+C:\Users\sebastian.gustavsson\Documents\1dv607_ws3\BlackJack\bin\Debug\BlackJack.exe.config
+C:\Users\sebastian.gustavsson\Documents\1dv607_ws3\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\sebastian.gustavsson\Documents\1dv607_ws3\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\sebastian.gustavsson\Documents\1dv607_ws3\BlackJack\obj\Debug\BlackJack.csprojResolveAssemblyReference.cache
+C:\Users\sebastian.gustavsson\Documents\1dv607_ws3\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\sebastian.gustavsson\Documents\1dv607_ws3\BlackJack\obj\Debug\BlackJack.pdb
