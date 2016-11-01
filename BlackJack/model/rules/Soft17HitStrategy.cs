@@ -24,16 +24,14 @@ namespace BlackJack.model.rules
         private bool softHand(model.Player a_dealer)
         {
             bool isASoftHand = false;
-            int aceCount = 0;
             IEnumerable<BlackJack.model.Card> cards = a_dealer.GetHand();
+
             foreach(Card card in cards)
             {
                 if (card.GetValue() == Card.Value.Ace) {
-                    aceCount += 1;
-                    }
+                    return true;
+                }
             }
-
-            isASoftHand = aceCount == 2;
 
             return isASoftHand;
         }

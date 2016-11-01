@@ -16,7 +16,6 @@ namespace BlackJack.model.rules
             a_player.DealCard(c);
 
             //c = a_deck.GetCard();
-            //c.Show(true);
             c = new Card(Card.Color.Clubs, Card.Value.Ace);
             c.Show(true);
             a_dealer.DealCard(c);
