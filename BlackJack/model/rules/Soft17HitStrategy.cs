@@ -13,7 +13,7 @@ namespace BlackJack.model.rules
 
         public bool DoHit(model.Player a_dealer)
         {
-            if (a_dealer.CalcScore() < g_softHitLimit && softHand(a_dealer)) {
+            if (a_dealer.CalcScore() < g_softHitLimit && isSoftHand(a_dealer)) {
                 return true;
             } else {
                 return a_dealer.CalcScore() < g_hitLimit;
@@ -21,7 +21,7 @@ namespace BlackJack.model.rules
             
         }
 
-        private bool softHand(model.Player a_dealer)
+        private bool isSoftHand(model.Player a_dealer)
         {
             bool isASoftHand = false;
             IEnumerable<BlackJack.model.Card> cards = a_dealer.GetHand();
