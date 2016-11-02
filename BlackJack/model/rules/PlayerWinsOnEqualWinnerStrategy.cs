@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack.model.rules
 {
-    class AdditionalWinnerStrategy : IWinnerStrategy
+    class PlayerWinsOnEqualWinnerStrategy : IWinnerStrategy
     {
         
         bool IWinnerStrategy.isDealerWinner(Player a_player, Dealer a_dealer)

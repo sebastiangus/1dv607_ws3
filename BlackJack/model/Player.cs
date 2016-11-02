@@ -8,10 +8,24 @@ namespace BlackJack.model
     class Player
     {
         private List<Card> m_hand = new List<Card>();
+        private Card card;
 
         public void DealCard(Card a_card)
         {
             m_hand.Add(a_card);
+        }
+
+        public void DealShownCardFromDeck(Deck a_deck)
+        {
+            card = a_deck.GetCard();
+            card.Show(true);
+            DealCard(card);
+        }
+
+        public void DealHiddenCardFromDeck(Deck a_deck)
+        {
+            card = a_deck.GetCard();
+            DealCard(card);
         }
 
         public IEnumerable<Card> GetHand()
