@@ -34,6 +34,7 @@ namespace BlackJack.controller
         public void update(model.Game a_game, view.IView a_view)
         {
             //https://msdn.microsoft.com/en-us/library/d00bd51t(v=vs.110).aspx
+           
             System.Threading.Thread.Sleep(1000);
             Render(a_game, a_view);
         }
