@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BlackJack;
 
 namespace BlackJack.model
 {
-    class Player
+    class Player : Subject
     {
         private List<Card> m_hand = new List<Card>();
         private Card card;
+        private model.Game _game;
+        private view.IView _view;
+
+        public Player(model.Game game, view.IView view)
+        {
+            _game = game;
+            _view = view;
+            addObserver("Player");
+        }
 
         public void DealCard(Card a_card)
         {
             m_hand.Add(a_card);
+            notify(_game, _view);
         }
 
         public void DealShownCardFromDeck(Deck a_deck)

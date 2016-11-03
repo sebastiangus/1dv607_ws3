@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//inspired by http://www.dofactory.com/net/observer-design-pattern
 namespace BlackJack.model
 {
-    class Class1
+    interface ICardDrawnObserver
     {
+        void update(model.Game a_game, view.IView a_view);
     }
 }

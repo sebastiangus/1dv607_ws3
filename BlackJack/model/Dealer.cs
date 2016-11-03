@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BlackJack;
 
 namespace BlackJack.model
 {
@@ -15,11 +16,12 @@ namespace BlackJack.model
         private rules.IWinnerStrategy m_winnerStrategy;
 
 
-        public Dealer(rules.RulesFactory a_rulesFactory)
+        public Dealer(model.Game game, view.IView view, rules.RulesFactory a_rulesFactory) : base(game, view)
         {
             m_newGameRule = a_rulesFactory.GetNewGameRule();
             m_hitRule = a_rulesFactory.GetHitRule();
             m_winnerStrategy = a_rulesFactory.GetWinnerStrategy();
+            addObserver("Dealer");
         }
 
         public bool NewGame(Player a_player)

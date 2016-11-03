@@ -73,6 +73,8 @@
     <Compile Include="controller\IPlayGame.cs" />
     <Compile Include="controller\PlayGame.cs" />
     <Compile Include="model\Card.cs" />
+    <Compile Include="model\ICardDrawnObserver.cs" />
+    <Compile Include="model\observerSubject.cs" />
     <Compile Include="model\Dealer.cs" />
     <Compile Include="model\Deck.cs" />
     <Compile Include="model\Game.cs" />
