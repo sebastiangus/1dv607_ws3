@@ -10,6 +10,8 @@ namespace BlackJack.model
 {
     abstract class Subject
     {
+        public model.Game _game;
+        public view.IView _view;
         private string _name;
         private List<ICardDrawnObserver> _o = new List<ICardDrawnObserver>();
 

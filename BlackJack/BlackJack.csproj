@@ -73,7 +73,7 @@
     <Compile Include="controller\IPlayGame.cs" />
     <Compile Include="controller\PlayGame.cs" />
     <Compile Include="model\Card.cs" />
-    <Compile Include="model\ICardDrawnObserver.cs" />
+    <Compile Include="controller\ICardDrawnObserver.cs" />
     <Compile Include="model\observerSubject.cs" />
     <Compile Include="model\Dealer.cs" />
     <Compile Include="model\Deck.cs" />
@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

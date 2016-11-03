@@ -36,6 +36,7 @@ namespace BlackJack.controller
             //https://msdn.microsoft.com/en-us/library/d00bd51t(v=vs.110).aspx
            
             System.Threading.Thread.Sleep(1000);
+
             Render(a_game, a_view);
         }
 

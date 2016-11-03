@@ -10,8 +10,7 @@ namespace BlackJack.model
     {
         private List<Card> m_hand = new List<Card>();
         private Card card;
-        private model.Game _game;
-        private view.IView _view;
+       
 
         public Player(model.Game game, view.IView view)
         {
