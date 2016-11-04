@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 
 //inspired by http://www.dofactory.com/net/observer-design-pattern
-namespace BlackJack.model
+namespace BlackJack.controller
 {
     interface ICardDrawnObserver
     {
-        void update(model.Game a_game, view.IView a_view);
+        void update(model.Game a_game);
     }
 }

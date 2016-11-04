@@ -9,16 +9,21 @@ namespace BlackJack.controller
 {
     class PlayGame : ICardDrawnObserver
     {
-        private void Render(model.Game a_game, view.IView a_view)
+        private view.IView a_view;
+
+        public PlayGame(view.IView view)
+        {
+            a_view = view;
+        }
+        private void Render(model.Game a_game)
         {
             a_view.DisplayWelcomeMessage();
-
             a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
             a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
         }
-        public bool Play(model.Game a_game, view.IView a_view)
+        public bool Play(model.Game a_game)
         {
-            Render(a_game, a_view);
+            Render(a_game);
 
             if (a_game.IsGameOver())
             {
@@ -31,12 +36,12 @@ namespace BlackJack.controller
             return input != GameAlternative.Quit;
         }
 
-        public void update(model.Game a_game, view.IView a_view)
+        public void update(model.Game a_game)
         {
             //https://msdn.microsoft.com/en-us/library/d00bd51t(v=vs.110).aspx
            
             System.Threading.Thread.Sleep(1000);
-            Render(a_game, a_view);
+            Render(a_game);
         }
 
         private bool PlayAlternative(GameAlternative input, model.Game a_game)
