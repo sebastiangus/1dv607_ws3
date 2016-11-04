@@ -10,19 +10,11 @@ namespace BlackJack.model
     {
         private List<Card> m_hand = new List<Card>();
         private Card card;
-       
-
-        public Player(model.Game game, view.IView view)
-        {
-            _game = game;
-            _view = view;
-            addObserver("Player");
-        }
 
         public void DealCard(Card a_card)
         {
             m_hand.Add(a_card);
-            notify(_game, _view);
+            notify();
         }
 
         public void DealShownCardFromDeck(Deck a_deck)

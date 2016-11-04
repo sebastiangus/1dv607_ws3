@@ -16,12 +16,11 @@ namespace BlackJack.model
         private rules.IWinnerStrategy m_winnerStrategy;
 
 
-        public Dealer(model.Game game, view.IView view, rules.RulesFactory a_rulesFactory) : base(game, view)
+        public Dealer(rules.RulesFactory a_rulesFactory)
         {
             m_newGameRule = a_rulesFactory.GetNewGameRule();
             m_hitRule = a_rulesFactory.GetHitRule();
             m_winnerStrategy = a_rulesFactory.GetWinnerStrategy();
-            addObserver("Dealer");
         }
 
         public bool NewGame(Player a_player)

@@ -10,10 +10,12 @@ namespace BlackJack.model
         private model.Dealer m_dealer;
         private model.Player m_player;
 
-        public Game(BlackJack.view.IView view)
+        public Game(controller.ICardDrawnObserver concreteObserver)
         {
-            m_dealer = new Dealer(this, view, new rules.RulesFactory());
-            m_player = new Player(this, view);
+            m_dealer = new Dealer(new rules.RulesFactory());
+            m_dealer.addObserver("Dealer", concreteObserver, this);
+            m_player = new Player();
+            m_dealer.addObserver("Player", concreteObserver, this);
         }
 
         public bool IsGameOver()
