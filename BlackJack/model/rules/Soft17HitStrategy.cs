@@ -11,12 +11,17 @@ namespace BlackJack.model.rules
         private const int g_softHitLimit = 18;
 
 
-        public bool DoHit(model.Player a_dealer)
+        public bool DoHit(model.Player a_dealer, model.Player a_player)
         {
+            if(a_dealer.CalcScore() > a_player.CalcScore())
+            {
+                return false;
+            }
+
             if (a_dealer.CalcScore() < g_softHitLimit && isSoftHand(a_dealer)) {
                 return true;
             } else {
-                return a_dealer.CalcScore() < g_hitLimit;
+                return a_dealer.CalcScore() < g_hitLimit || a_dealer.CalcScore() < a_player.CalcScore();
             }
             
         }

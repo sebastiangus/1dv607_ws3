@@ -15,11 +15,12 @@ namespace BlackJack.model.rules
             int dealerScore = a_dealer.CalcScore();
             int playerScore = a_player.CalcScore();
 
-            if (playerScore > maxScore) {
+            if (playerScore > maxScore ) {
                 return true;
             }
 
-            else if (dealerScore > maxScore) {
+            else if (dealerScore > maxScore)
+            {
                 return false;
             }
 

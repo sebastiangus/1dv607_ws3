@@ -6,7 +6,7 @@ using BlackJack;
 
 namespace BlackJack.model
 {
-    class Player : Subject
+    class Player : observerSubject
     {
         private List<Card> m_hand = new List<Card>();
         private Card card;

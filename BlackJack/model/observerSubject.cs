@@ -9,7 +9,7 @@ using BlackJack.controller;
 //inspired by http://www.dofactory.com/net/observer-design-pattern
 namespace BlackJack.model
 {
-    abstract class Subject
+    abstract class observerSubject
     {
         protected model.Game _game;
 

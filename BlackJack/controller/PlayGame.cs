@@ -42,7 +42,7 @@ namespace BlackJack.controller
            
             System.Threading.Thread.Sleep(1000);
 
-            Render(a_game);
+            Play(a_game);
         }
 
         private bool PlayAlternative(GameAlternative input, model.Game a_game)
