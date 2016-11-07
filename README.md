@@ -1,5 +1,6 @@
 # blackjack_csharp
 
-Fork this code to work with C# in workshop 3.
 
-Contains cs files and project files for Visual Studio 10. Also a modeling project is included, but this project will not load in certain versions of Visual Studio.
+##Peer Reviews
+Peer review 1 group tr222cj: https://docs.google.com/document/d/1Wr8_R1pjWx3dqkOwq07hfkXLxxWh1IGph_DC9W_SZY4/edit
+Github: https://github.com/sticky4loop/ooad-ws3
