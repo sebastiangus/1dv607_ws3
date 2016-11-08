@@ -20,7 +20,7 @@ namespace BlackJack.model
             _o.Add(concreteObserver);
             _game = game;
             _name = name;
-            
+        
         }
 
         public void notify() {
